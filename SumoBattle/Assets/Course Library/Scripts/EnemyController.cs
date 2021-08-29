@@ -6,6 +6,8 @@ public class EnemyController : MonoBehaviour
 {
     //Properties...
     private GameObject player;
+    private float yPosLimit = -30.0f;
+    //private GameObject floor;
     private Rigidbody enemyRB;
     private Vector3 direction;
     public float speed = 10.0f;
@@ -20,6 +22,10 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         chasePlayer();
+        if(transform.position.y <= yPosLimit)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void chasePlayer()

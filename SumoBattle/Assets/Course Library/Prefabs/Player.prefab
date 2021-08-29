@@ -126,4 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 0}
+  impactForce: 10
   force: 10
+  hasPowerup: 0
+  powerupIndicator: {fileID: 1532589163336761734, guid: 9a6e07241a689f3468bfada300693e7e, type: 3}
