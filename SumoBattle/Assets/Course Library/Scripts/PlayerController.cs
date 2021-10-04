@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour
         playerRB.AddForce(focalPoint.transform.forward * force * verticalInput *Time.deltaTime);
         playerRB.AddForce(focalPoint.transform.right * force * horizontalInput * Time.deltaTime);
         powerupIndicator.transform.position = transform.position + new Vector3(0.0f, -0.5f,0.0f);
+
+        if(transform.position.y <= -30.0f)
+        {
+            Destroy(gameObject);
+            Application.Quit();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
